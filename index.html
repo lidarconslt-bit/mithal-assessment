@@ -383,6 +383,186 @@ input::placeholder{color:var(--text3);}
   border-radius:10px;margin-bottom:12px;
   background:var(--surface2);border:1px solid var(--border);color:var(--text3);
 }
+
+/* D axis card header */
+.card-hdr.digi { background: linear-gradient(135deg,#2d6a4f,#1b4a7a); }
+.d-note { background:#e8f5ee; border-right:4px solid #2d6a4f; padding:12px 14px; border-radius:8px; margin-bottom:18px; font-size:13px; color:#1b4a7a; line-height:1.7; }
+/* axis-row for D in results */
+.axis-row .digi-letter { background: #2d6a4f; }
+
+
+.res-framing{
+  font-size:11px;
+  color:rgba(255,255,255,.6);
+  text-align:center;
+  margin-top:10px;
+  padding:0 20px;
+  line-height:1.6;
+  font-style:italic;
+}
+
+
+.flag-note{
+  background:#fffbeb;
+  border:1px solid #fcd34d;
+  border-right:4px solid var(--gold);
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:12px;
+  color:#78350f;
+  margin-bottom:8px;
+  line-height:1.7;
+}
+
+
+/* ── NAV BUTTONS ── */
+.nav-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+}
+.btn-next{
+  flex:1;
+  background:linear-gradient(135deg,var(--teal),var(--lidar));
+  color:#fff;
+  border:none;
+  border-radius:var(--r);
+  padding:14px 24px;
+  font-family:'IBM Plex Sans Arabic',sans-serif;
+  font-size:15px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all .22s;
+  box-shadow:0 2px 10px rgba(31,109,117,.25);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.btn-next:hover{
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(31,109,117,.35);
+}
+.btn-next:active{transform:translateY(0);}
+.btn-back{
+  background:transparent;
+  color:var(--text3);
+  border:1.5px solid var(--border2);
+  border-radius:var(--r);
+  padding:12px 18px;
+  font-family:'IBM Plex Sans Arabic',sans-serif;
+  font-size:13px;
+  font-weight:500;
+  cursor:pointer;
+  transition:all .18s;
+  white-space:nowrap;
+}
+.btn-back:hover{
+  border-color:var(--teal);
+  color:var(--teal);
+  background:var(--teal-l);
+}
+
+
+/* ── REPORT SECTIONS ── */
+.rep-section{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  padding:20px;
+  margin-bottom:14px;
+}
+.rep-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--teal);
+  margin-bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.rep-title::after{
+  content:'';flex:1;height:1px;background:var(--border);
+}
+.strength-item{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:10px;font-size:13px;line-height:1.7;color:var(--text);
+}
+.strength-icon{
+  width:20px;height:20px;border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),var(--lidar));
+  color:#fff;font-size:10px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+.opp-text{
+  font-size:13px;line-height:1.9;color:var(--text);
+  background:var(--lidar-l);
+  border-right:3px solid var(--lidar);
+  padding:14px 16px;border-radius:8px;
+}
+.rec-item{
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  padding:14px 16px;
+  margin-bottom:10px;
+  position:relative;
+}
+.rec-num{
+  position:absolute;right:16px;top:-10px;
+  background:var(--teal);color:#fff;
+  font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:20px;
+}
+.rec-head{font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.rec-body{font-size:12px;color:var(--text2);line-height:1.7;}
+.rec-action{
+  margin-top:8px;font-size:11px;
+  color:var(--teal);font-weight:600;
+  background:var(--teal-l);
+  display:inline-block;padding:4px 10px;border-radius:20px;
+}
+.disclaimer-box{
+  background:var(--surface2);
+  border:1px solid var(--border);
+  border-radius:var(--rs);
+  padding:14px 16px;
+  font-size:11px;
+  color:var(--text3);
+  line-height:1.8;
+  margin-bottom:14px;
+  text-align:center;
+}
+
+
+/* ── PACKAGE CARDS ── */
+.pkg-grid{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+.pkg-card{
+  display:flex;align-items:flex-start;gap:12px;
+  border:1.5px solid var(--border2);
+  border-radius:var(--r);
+  padding:14px 16px;
+  cursor:pointer;
+  transition:all .2s;
+  background:var(--surface);
+}
+.pkg-card:has(input:checked){
+  border-color:var(--teal);
+  background:var(--teal-l);
+  box-shadow:0 0 0 3px rgba(31,109,117,.1);
+}
+.pkg-card input[type=radio]{margin-top:3px;accent-color:var(--teal);flex-shrink:0;}
+.pkg-body{flex:1;}
+.pkg-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.pkg-desc{font-size:12px;color:var(--text2);line-height:1.7;margin-bottom:6px;}
+.pkg-tag{
+  display:inline-block;
+  font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:20px;
+  background:var(--teal);color:#fff;
+}
+
 </style>
 </head>
 <body>
@@ -408,7 +588,7 @@ input::placeholder{color:var(--text3);}
         <div class="ititle">نموذج التقييم التشغيلي الذكي</div>
         <div class="ibody">أربعة معايير دولية معتمدة لتشخيص منشآت الأغذية السعودية</div>
         <div class="fpills" style="justify-content:center;">
-          <span class="fpill"><em>M</em> رصد المنيو</span>
+          <span class="fpill"><em>M</em> رصد قائمة الأصناف</span>
           <span class="fpill"><em>I</em> فحص التشغيل</span>
           <span class="fpill"><em>T</em> اختبار الطلبات</span>
           <span class="fpill"><em>HAL</em> إبراز الخسائر</span>
@@ -437,16 +617,9 @@ input::placeholder{color:var(--text3);}
 <!-- ══ STEP 1 ══ -->
 <div id="sc-1" class="screen">
   <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-name">معلومات المشروع</span><span class="prog-pct">14%</span></div>
-    <div class="prog-bar"><div class="prog-fill" style="width:14%"></div></div>
-    <div class="prog-steps">
-      <span class="pstep active"><span class="pdot"></span>المشروع</span>
-      <span class="pstep"><span class="pdot"></span>المنيو</span>
-      <span class="pstep"><span class="pdot"></span>التشغيل</span>
-      <span class="pstep"><span class="pdot"></span>الطلبات</span>
-      <span class="pstep"><span class="pdot"></span>الخسائر</span>
-      <span class="pstep"><span class="pdot"></span>الاستلام</span>
-    </div>
+    <div class="prog-top"><span class="prog-name">معلومات المشروع</span><span class="prog-pct">12%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:12%"></div></div>
+    <div class="prog-steps"><span class="pstep active"><span class="pdot"></span>المشروع</span><span class="pstep "><span class="pdot"></span>الأصناف</span><span class="pstep "><span class="pdot"></span>التشغيل</span><span class="pstep "><span class="pdot"></span>الطلبات</span><span class="pstep "><span class="pdot"></span>الخسائر</span><span class="pstep "><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr">
@@ -534,20 +707,20 @@ input::placeholder{color:var(--text3);}
 <!-- ══ STEP 2: M ══ -->
 <div id="sc-2" class="screen">
   <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-name">M — المنيو والتسعير</span><span class="prog-pct">28%</span></div>
-    <div class="prog-bar"><div class="prog-fill" style="width:28%"></div></div>
-    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep active"><span class="pdot"></span>المنيو</span><span class="pstep"><span class="pdot"></span>التشغيل</span><span class="pstep"><span class="pdot"></span>الطلبات</span><span class="pstep"><span class="pdot"></span>الخسائر</span><span class="pstep"><span class="pdot"></span>الاستلام</span></div>
+    <div class="prog-top"><span class="prog-name">M — قائمة الأصناف والتسعير</span><span class="prog-pct">25%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:25%"></div></div>
+    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep active"><span class="pdot"></span>الأصناف</span><span class="pstep "><span class="pdot"></span>التشغيل</span><span class="pstep "><span class="pdot"></span>الطلبات</span><span class="pstep "><span class="pdot"></span>الخسائر</span><span class="pstep "><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr">
-      <div class="sec-tag"><div class="sec-letter">M</div><div><div class="sec-title">المنيو والتسعير — Monitor</div><div class="sec-ref">Menu Engineering — Smith & Kasavana (1982)</div></div></div>
+      <div class="sec-tag"><div class="sec-letter">M</div><div><div class="sec-title">قائمة الأصناف والتسعير — Monitor</div><div class="sec-ref">Menu Engineering — Smith & Kasavana (1982)</div></div></div>
     </div>
     <div class="card-body">
-      <div class="field"><label>M1 — هل جميع منتجاتك تحمل سعراً واضحاً ومعلناً؟</label><div class="rg c2"><label class="rb"><input type="radio" name="m1" value="5"><span class="rl">نعم، بوضوح</span></label><label class="rb"><input type="radio" name="m1" value="1"><span class="rl">لا</span></label></div></div>
-      <div class="field"><label>M2 — هل يوجد توضيح للمكونات أو مسببات الحساسية؟</label><div class="rg c3"><label class="rb"><input type="radio" name="m2" value="5"><span class="rl">نعم</span></label><label class="rb"><input type="radio" name="m2" value="3"><span class="rl">جزئي</span></label><label class="rb"><input type="radio" name="m2" value="1"><span class="rl">لا</span></label></div></div>
-      <div class="field"><label>M3 — ما مستوى وجود منتجات ضعيفة الطلب في المنيو؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا يوجد</span><span>كثيرة ومؤثرة</span></div><div class="likert-opts" id="lk-m3"></div></div></div>
-      <div class="field"><label>M4 — ما مدى دقة تسعير منتجاتك مقابل التكلفة الفعلية؟</label><div class="likert-wrap"><div class="likert-labels"><span>دقيق جداً</span><span>عشوائي</span></div><div class="likert-opts" id="lk-m4"></div></div></div>
-      <div class="field"><label>M5 — ما تقديرك لهامش الربح الصافي لأكثر منتجاتك مبيعاً؟</label><div class="rg c2"><label class="rb"><input type="radio" name="m5" value="أقل من 20%"><span class="rl">أقل من 20%</span></label><label class="rb"><input type="radio" name="m5" value="20-35%"><span class="rl">20–35%</span></label><label class="rb"><input type="radio" name="m5" value="35-50%"><span class="rl">35–50%</span></label><label class="rb"><input type="radio" name="m5" value="أكثر من 50%"><span class="rl">أكثر من 50%</span></label><label class="rb"><input type="radio" name="m5" value="لا أعرف"><span class="rl">لا أعرف</span></label></div></div>
+      <div class="field"><label>هل أسعار منتجاتك مُعلنة بوضوح ومتاحة للعميل قبل الطلب؟</label><div class="rg c2"><label class="rb"><input type="radio" name="m1" value="5"><span class="rl">نعم — معلنة بالكامل ورقمياً</span></label><label class="rb"><input type="radio" name="m1" value="1"><span class="rl">لا — الأسعار غير مُعلنة</span></label></div></div>
+      <div class="field"><label>هل قائمة أصنافك يتضمن توضيح المكونات الرئيسية أو مسببات الحساسية؟</label><div class="rg c3"><label class="rb"><input type="radio" name="m2" value="5"><span class="rl">نعم — موضح بوضوح</span></label><label class="rb"><input type="radio" name="m2" value="3"><span class="rl">جزئياً — بعض المنتجات فقط</span></label><label class="rb"><input type="radio" name="m2" value="1"><span class="rl">لا — غير مُدرج في القائمة</span></label></div></div>
+      <div class="field"><label>كم نسبة المنتجات في قائمة أصنافك التي نادراً ما يطلبها العملاء؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا يوجد — القائمة مُحكمة</span><span>أكثر من 30% من المنتجات</span></div><div class="likert-opts" id="lk-m3"></div></div></div>
+      <div class="field"><label>هل أسعار منتجاتك مبنية على حساب تكلفة فعلي أم على تقدير شخصي؟</label><div class="likert-wrap"><div class="likert-labels"><span>مبني على تكلفة محسوبة</span><span>تقدير شخصي فقط</span></div><div class="likert-opts" id="lk-m4"></div></div></div>
+      <div class="field"><label>ما هامش الربح الصافي التقريبي لأكثر منتجاتك مبيعاً؟ (بعد خصم جميع التكاليف)</label><div class="rg c2"><label class="rb"><input type="radio" name="m5" value="أقل من 20%"><span class="rl">أقل من 20%</span></label><label class="rb"><input type="radio" name="m5" value="20-35%"><span class="rl">20–35%</span></label><label class="rb"><input type="radio" name="m5" value="35-50%"><span class="rl">35–50%</span></label><label class="rb"><input type="radio" name="m5" value="أكثر من 50%"><span class="rl">أكثر من 50%</span></label><label class="rb"><input type="radio" name="m5" value="لا أعرف"><span class="rl">لا أعرف</span></label></div></div>
       <div class="btn-row"><button class="btn-p" onclick="go(2)">التالي ←</button><button class="btn-s" onclick="back(1)">→ رجوع</button></div>
     </div>
   </div>
@@ -556,18 +729,34 @@ input::placeholder{color:var(--text3);}
 <!-- ══ STEP 3: I ══ -->
 <div id="sc-3" class="screen">
   <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-name">I — التشغيل الداخلي</span><span class="prog-pct">46%</span></div>
-    <div class="prog-bar"><div class="prog-fill" style="width:46%"></div></div>
-    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>المنيو</span><span class="pstep active"><span class="pdot"></span>التشغيل</span><span class="pstep"><span class="pdot"></span>الطلبات</span><span class="pstep"><span class="pdot"></span>الخسائر</span><span class="pstep"><span class="pdot"></span>الاستلام</span></div>
+    <div class="prog-top"><span class="prog-name">I — التشغيل الداخلي</span><span class="prog-pct">37%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:37%"></div></div>
+    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>الأصناف</span><span class="pstep active"><span class="pdot"></span>التشغيل</span><span class="pstep "><span class="pdot"></span>الطلبات</span><span class="pstep "><span class="pdot"></span>الخسائر</span><span class="pstep "><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr"><div class="sec-tag"><div class="sec-letter">I</div><div><div class="sec-title">التشغيل الداخلي — Inspect</div><div class="sec-ref">ISO 22000:2018 / HACCP — Codex Alimentarius</div></div></div></div>
     <div class="card-body">
-      <div class="field"><label>I1 — كيف تقيّم مستوى النظافة والترتيب في موقع العمل؟</label><div class="likert-wrap"><div class="likert-labels"><span>ممتاز</span><span>ضعيف جداً</span></div><div class="likert-opts" id="lk-i1"></div></div></div>
-      <div class="field"><label>I2 — ما مستوى التزام الموظفين بالإجراءات والتعليمات؟</label><div class="likert-wrap"><div class="likert-labels"><span>ملتزمون بالكامل</span><span>غير ملتزمين</span></div><div class="likert-opts" id="lk-i2"></div></div></div>
-      <div class="field"><label>I3 — هل يوجد إجراءات واضحة موثقة للعمل؟</label><div class="likert-wrap"><div class="likert-labels"><span>موثقة وتُطبَّق</span><span>غير موجودة</span></div><div class="likert-opts" id="lk-i3"></div></div></div>
-      <div class="field"><label>I4 — ما مستوى ملاحظات العملاء المتكررة على الخدمة؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا يوجد</span><span>كثيرة ومتكررة</span></div><div class="likert-opts" id="lk-i4"></div></div></div>
-      <div class="field"><label>I5 — ما معدل دوران الموظفين خلال 12 شهراً؟</label><div class="rg c2"><label class="rb"><input type="radio" name="i5" value="لا يوجد دوران"><span class="rl">لا يوجد دوران</span></label><label class="rb"><input type="radio" name="i5" value="1-2 موظف"><span class="rl">1–2 موظف</span></label><label class="rb"><input type="radio" name="i5" value="3-5 موظفين"><span class="rl">3–5 موظفين</span></label><label class="rb"><input type="radio" name="i5" value="أكثر من 5"><span class="rl">أكثر من 5</span></label></div></div>
+      <div class="field"><label>كيف تصف مستوى النظافة والترتيب في منطقة التحضير والخدمة يومياً؟</label><div class="likert-wrap"><div class="likert-labels"><span>ممتاز — معيار يومي صارم</span><span>ضعيف — ملاحظات متكررة</span></div><div class="likert-opts" id="lk-i1"></div></div></div>
+      <div class="field">
+        <label>ما آخر مرة غبت فيها عن المشروع يوماً كاملاً وعمل التشغيل بدونك؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="i2" value="5"><span class="rl">أغيب بانتظام — التشغيل يستمر بكفاءة</span></label>
+          <label class="rb"><input type="radio" name="i2" value="3"><span class="rl">أغيب أحياناً — التشغيل يستمر بصعوبة</span></label>
+          <label class="rb"><input type="radio" name="i2" value="2"><span class="rl">نادراً ما أغيب — التشغيل يعتمد على وجودي</span></label>
+          <label class="rb"><input type="radio" name="i2" value="1"><span class="rl">لم أغب يوماً كاملاً منذ الافتتاح</span></label>
+        </div>
+      </div>
+      <div class="field"><label>هل لديك إجراءات عمل مكتوبة يرجع إليها الموظفون؟ (تحضير، تقديم، نظافة)</label><div class="likert-wrap"><div class="likert-labels"><span>موثقة وتُطبَّق بانتظام</span><span>لا توجد وثائق</span></div><div class="likert-opts" id="lk-i3"></div></div></div>
+      <div class="field"><label>كم تتكرر شكاوى العملاء أو ملاحظاتهم على جودة الخدمة أو المنتج؟</label><div class="likert-wrap"><div class="likert-labels"><span>نادراً — رضا عالٍ</span><span>يومياً — مشكلة متكررة</span></div><div class="likert-opts" id="lk-i4"></div></div></div>
+      <div class="field"><label>كم موظفاً غادر أو استُبدل في مشروعك خلال الـ 12 شهراً الماضية؟</label><div class="rg c2"><label class="rb"><input type="radio" name="i5" value="5"><span class="rl">لا أحد — فريق ثابت</span></label><label class="rb"><input type="radio" name="i5" value="4"><span class="rl">1–2 موظف</span></label><label class="rb"><input type="radio" name="i5" value="2"><span class="rl">3–5 موظفين — دوران ملحوظ</span></label><label class="rb"><input type="radio" name="i5" value="1"><span class="rl">أكثر من 5 — دوران مرتفع</span></label></div></div>
+      <div class="field">
+        <label>هل تعرض أياً من المعلومات التالية في قائمة أصنافك؟ <span style="font-size:11px;color:var(--text3);font-weight:400;">(لا يؤثر على درجتك)</span></label>
+        <div class="rg c2" style="flex-wrap:wrap;">
+          <label class="rb"><input type="checkbox" name="i6" value="calories" id="i6-cal"><span class="rl">السعرات الحرارية</span></label>
+          <label class="rb"><input type="checkbox" name="i6" value="allergens" id="i6-all"><span class="rl">مسببات الحساسية الرئيسية</span></label>
+          <label class="rb"><input type="checkbox" name="i6" value="none" id="i6-none"><span class="rl">لا أعرض أياً منها حالياً</span></label>
+        </div>
+      </div>
       <div class="btn-row"><button class="btn-p" onclick="go(3)">التالي ←</button><button class="btn-s" onclick="back(2)">→ رجوع</button></div>
     </div>
   </div>
@@ -576,17 +765,17 @@ input::placeholder{color:var(--text3);}
 <!-- ══ STEP 4: T ══ -->
 <div id="sc-4" class="screen">
   <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-name">T — تدفق الطلبات</span><span class="prog-pct">64%</span></div>
-    <div class="prog-bar"><div class="prog-fill" style="width:64%"></div></div>
-    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>المنيو</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep active"><span class="pdot"></span>الطلبات</span><span class="pstep"><span class="pdot"></span>الخسائر</span><span class="pstep"><span class="pdot"></span>الاستلام</span></div>
+    <div class="prog-top"><span class="prog-name">T — تدفق الطلبات</span><span class="prog-pct">50%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:50%"></div></div>
+    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>الأصناف</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep active"><span class="pdot"></span>الطلبات</span><span class="pstep "><span class="pdot"></span>الخسائر</span><span class="pstep "><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr"><div class="sec-tag"><div class="sec-letter">T</div><div><div class="sec-title">تدفق الطلبات — Test</div><div class="sec-ref">Lean Operations / Toyota Production System (TPS)</div></div></div></div>
     <div class="card-body">
-      <div class="field"><label>T1 — كيف تقيّم سرعة تجهيز الطلبات؟</label><div class="likert-wrap"><div class="likert-labels"><span>سريع جداً</span><span>بطيء جداً</span></div><div class="likert-opts" id="lk-t1"></div></div></div>
-      <div class="field"><label>T2 — ما مستوى الأخطاء في الطلبات؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا توجد أخطاء</span><span>كثيرة ومتكررة</span></div><div class="likert-opts" id="lk-t2"></div></div></div>
-      <div class="field"><label>T3 — كم مرة يتم إرجاع طلبات أو تعويض عملاء؟</label><div class="rg c3"><label class="rb"><input type="radio" name="t3" value="نادراً أو لا"><span class="rl">نادراً أو لا</span></label><label class="rb"><input type="radio" name="t3" value="مرة أسبوعياً"><span class="rl">مرة أسبوعياً</span></label><label class="rb"><input type="radio" name="t3" value="أكثر من مرة"><span class="rl">أكثر من مرة</span></label></div></div>
-      <div class="field"><label>T4 — ما مستوى الضغط في أوقات الذروة؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا يوجد</span><span>ضغط شديد يؤثر على الخدمة</span></div><div class="likert-opts" id="lk-t4"></div></div></div>
+      <div class="field"><label>ما متوسط وقت تجهيز الطلب من لحظة الاستلام حتى التسليم للعميل؟</label><div class="likert-wrap"><div class="likert-labels"><span>أقل من 5 دقائق — سريع جداً</span><span>أكثر من 20 دقيقة — بطيء</span></div><div class="likert-opts" id="lk-t1"></div></div></div>
+      <div class="field"><label>كم مرة يُسلَّم طلب خاطئ أو ناقص للعميل خلال يوم عمل عادي؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا أخطاء — دقة عالية</span><span>أكثر من 3 أخطاء يومياً</span></div><div class="likert-opts" id="lk-t2"></div></div></div>
+      <div class="field"><label>كم مرة قمت بإرجاع طلب أو تعويض عميل (استبدال أو رد مبلغ) خلال أسبوع؟</label><div class="rg c3"><label class="rb"><input type="radio" name="t3" value="5"><span class="rl">نادراً — أقل من مرة شهرياً</span></label><label class="rb"><input type="radio" name="t3" value="3"><span class="rl">مرة أسبوعياً تقريباً</span></label><label class="rb"><input type="radio" name="t3" value="1"><span class="rl">أكثر من مرة أسبوعياً</span></label></div></div>
+      <div class="field"><label>كيف يتأثر مستوى الخدمة في أوقات الذروة مقارنة بالأوقات العادية؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا فرق — الخدمة ثابتة</span><span>ينهار التشغيل في الذروة</span></div><div class="likert-opts" id="lk-t4"></div></div></div>
       <div class="btn-row"><button class="btn-p" onclick="go(4)">التالي ←</button><button class="btn-s" onclick="back(3)">→ رجوع</button></div>
     </div>
   </div>
@@ -595,18 +784,26 @@ input::placeholder{color:var(--text3);}
 <!-- ══ STEP 5: HAL ══ -->
 <div id="sc-5" class="screen">
   <div class="prog-wrap">
-    <div class="prog-top"><span class="prog-name">HAL — الخسائر الخفية</span><span class="prog-pct">82%</span></div>
-    <div class="prog-bar"><div class="prog-fill" style="width:82%"></div></div>
-    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>المنيو</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep done"><span class="pdot"></span>الطلبات</span><span class="pstep active"><span class="pdot"></span>الخسائر</span><span class="pstep"><span class="pdot"></span>الاستلام</span></div>
+    <div class="prog-top"><span class="prog-name">HAL — الخسائر الخفية</span><span class="prog-pct">62%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:62%"></div></div>
+    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>الأصناف</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep done"><span class="pdot"></span>الطلبات</span><span class="pstep active"><span class="pdot"></span>الخسائر</span><span class="pstep "><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr gold"><div class="sec-tag"><div class="sec-letter" style="font-size:10px;">HAL</div><div><div class="sec-title">الخسائر الخفية — المحور الأعلى وزناً (35%)</div><div class="sec-ref">UNEP Food Waste Index (2021) / Cost of Poor Quality (COPQ)</div></div></div></div>
     <div class="card-body">
-      <div class="field"><label>H1 — ما مدى وضوح معرفتك بالمنتجات الأكثر ربحية لديك؟</label><div class="likert-wrap"><div class="likert-labels"><span>واضح جداً</span><span>غير واضح</span></div><div class="likert-opts" id="lk-h1"></div></div></div>
-      <div class="field"><label>H2 — ما مستوى متابعة التكاليف التشغيلية بشكل منتظم؟</label><div class="likert-wrap"><div class="likert-labels"><span>متابعة دقيقة</span><span>لا توجد متابعة</span></div><div class="likert-opts" id="lk-h2"></div></div></div>
-      <div class="field"><label>H3 — هل أرباح مشروعك أقل مما تتوقع مقارنة بالمبيعات؟</label><div class="likert-wrap"><div class="likert-labels"><span>كما أتوقع</span><span>أقل بكثير</span></div><div class="likert-opts" id="lk-h3"></div></div></div>
-      <div class="field"><label>H4 — ما مستوى الهدر في المواد الخام أو الطلبات؟</label><div class="likert-wrap"><div class="likert-labels"><span>لا يوجد</span><span>عالٍ جداً</span></div><div class="likert-opts" id="lk-h4"></div></div></div>
-      <div class="field"><label>H5 — ما أكثر عامل تعتقد أنه يسبب ضعف الربح في مشروعك؟</label><div class="rg c2"><label class="rb"><input type="radio" name="h5" value="التسعير"><span class="rl">التسعير</span></label><label class="rb"><input type="radio" name="h5" value="التشغيل اليومي"><span class="rl">التشغيل اليومي</span></label><label class="rb"><input type="radio" name="h5" value="الموظفون"><span class="rl">الموظفون</span></label><label class="rb"><input type="radio" name="h5" value="ضعف الطلب"><span class="rl">ضعف الطلب</span></label><label class="rb"><input type="radio" name="h5" value="غير واضح"><span class="rl">غير واضح</span></label></div></div>
+      <div class="field"><label>هل تعرف بالضبط أي منتجاتك يحقق أعلى هامش ربح صافٍ — وليس فقط أعلى مبيعاً؟</label><div class="likert-wrap"><div class="likert-labels"><span>أعرف بالأرقام الدقيقة</span><span>لا فكرة لديّ</span></div><div class="likert-opts" id="lk-h1"></div></div></div>
+      <div class="field"><label>كيف تتابع تكاليف التشغيل (مواد خام، إيجار، رواتب) مقارنة بإيراداتك؟</label><div class="likert-wrap"><div class="likert-labels"><span>تقارير أسبوعية دقيقة</span><span>لا أتابع بشكل منتظم</span></div><div class="likert-opts" id="lk-h2"></div></div></div>
+      <div class="field">
+        <label>هل حدث أن أنهيت شهراً بمبيعات جيدة لكن ربحك كان أقل مما توقعت ولم تعرف السبب؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="h3" value="1"><span class="rl">نعم، حدث هذا مرات عدة ولا أزال لا أفهم السبب</span></label>
+          <label class="rb"><input type="radio" name="h3" value="3"><span class="rl">نعم، حدث لكنني توصلت لاحقاً للسبب وعالجته</span></label>
+          <label class="rb"><input type="radio" name="h3" value="4"><span class="rl">نادراً — أتتبع التكاليف بما يكفي لتوقع النتيجة</span></label>
+          <label class="rb"><input type="radio" name="h3" value="5"><span class="rl">لا، نتائجي الشهرية متوقعة دائماً</span></label>
+        </div>
+      </div>
+      <div class="field"><label>كم تُقدِّر نسبة الهدر في المواد الخام أو المنتجات غير المُباعة يومياً؟</label><div class="likert-wrap"><div class="likert-labels"><span>أقل من 2% — هدر ضئيل</span><span>أكثر من 15% — هدر مرتفع</span></div><div class="likert-opts" id="lk-h4"></div></div></div>
+      <div class="field"><label>في رأيك، ما العامل الأكثر تأثيراً على ضعف الربحية في مشروعك حالياً؟</label><div class="rg c2"><label class="rb"><input type="radio" name="h5" value="التسعير"><span class="rl">التسعير — الأسعار أقل من التكلفة الفعلية</span></label><label class="rb"><input type="radio" name="h5" value="التشغيل اليومي"><span class="rl">التشغيل — هدر وأخطاء متكررة</span></label><label class="rb"><input type="radio" name="h5" value="الموظفون"><span class="rl">الموظفون — كفاءة أو دوران عالٍ</span></label><label class="rb"><input type="radio" name="h5" value="ضعف الطلب"><span class="rl">المبيعات — حجم طلبات غير كافٍ</span></label><label class="rb"><input type="radio" name="h5" value="غير واضح"><span class="rl">غير واضح — لا أعرف المصدر الحقيقي</span></label></div></div>
       <div class="divider"></div>
       <div class="rev-box">
         <div class="rev-title">📊 متوسط المبيعات اليومية (تقريبي)</div>
@@ -619,19 +816,124 @@ input::placeholder{color:var(--text3);}
 </div>
 
 <!-- ══ STEP 6 ══ -->
+<div id="sc-5b" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-top"><span class="prog-name">D — الأداء الرقمي</span><span class="prog-pct">75%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:75%"></div></div>
+    <div class="prog-steps"><div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>الأصناف</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep done"><span class="pdot"></span>الطلبات</span><span class="pstep done"><span class="pdot"></span>الخسائر</span><span class="pstep active"><span class="pdot"></span>التوصيل</span><span class="pstep "><span class="pdot"></span>الاستلام</span></div></div>
+  </div>
+  <div class="card">
+    <div class="card-hdr" style="background:linear-gradient(135deg,#2d6a4f,#1b4a7a);">
+      <div class="sec-tag">
+        <div class="sec-letter">D</div>
+        <div>
+          <div class="sec-title">الأداء الرقمي — منصات التوصيل (15%)</div>
+          <div class="sec-ref">Platform Performance Index — Digital Operations Metrics</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="d-note">
+        <strong>ملاحظة:</strong> هذا المحور يقيس أداءك على قنوات التوصيل الرقمي دون تسمية أي منصة — إجاباتك تُستخدم لتحسين تقريرك فقط.
+      </div>
+
+      <div class="field">
+        <label>ما نسبة إيرادك القادمة من منصات التوصيل الرقمي؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="d1" value="1" id="d1-none"><span class="rl">لا أستخدم التوصيل حالياً</span></label>
+          <label class="rb"><input type="radio" name="d1" value="2"><span class="rl">أبدأ قريباً — قيد الإعداد</span></label>
+          <label class="rb"><input type="radio" name="d1" value="3"><span class="rl">أقل من 20% من إيرادي</span></label>
+          <label class="rb"><input type="radio" name="d1" value="4"><span class="rl">20% – 50% من إيرادي</span></label>
+          <label class="rb"><input type="radio" name="d1" value="5"><span class="rl">أكثر من 50% — قناتي الرئيسية</span></label>
+        </div>
+      </div>
+
+      <div id="d-skip-note" style="display:none;background:var(--teal-l);border-right:4px solid var(--teal);padding:14px 16px;border-radius:var(--r);margin-bottom:18px;font-size:13px;color:var(--teal);line-height:1.8;">✓ تم تسجيل إجابتك — لا تستخدم التوصيل الرقمي حالياً، وهذا خيار تشغيلي مشروع. سيُحسب هذا المحور بدرجة محايدة دون أي تأثير سلبي على نتيجتك الكلية.</div>
+      <div id="d2-to-d5">
+      <div class="field">
+        <label>على كم منصة توصيل رقمية مُدرج مشروعك حالياً وتستقبل منها طلبات؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="d2" value="1"><span class="rl">لا أستخدم أي منصة</span></label>
+          <label class="rb"><input type="radio" name="d2" value="3"><span class="rl">منصة واحدة</span></label>
+          <label class="rb"><input type="radio" name="d2" value="4"><span class="rl">منصتان</span></label>
+          <label class="rb"><input type="radio" name="d2" value="5"><span class="rl">3 منصات أو أكثر</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>ما نسبة الطلبات التي يتم إلغاؤها على منصات التوصيل تقريباً؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="d3" value="5"><span class="rl">أقل من 2% — إلغاء نادر جداً</span></label>
+          <label class="rb"><input type="radio" name="d3" value="4"><span class="rl">2% – 5%</span></label>
+          <label class="rb"><input type="radio" name="d3" value="3"><span class="rl">5% – 10%</span></label>
+          <label class="rb"><input type="radio" name="d3" value="2"><span class="rl">أكثر من 10% — مشكلة واضحة</span></label>
+          <label class="rb"><input type="radio" name="d3" value="1"><span class="rl">لا أعرف نسبة الإلغاء</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>ما متوسط تقييم مشروعك على منصات التوصيل حالياً؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="d4" value="1"><span class="rl">لا أتابع التقييمات</span></label>
+          <label class="rb"><input type="radio" name="d4" value="2"><span class="rl">أقل من 3.5 ⭐ — يحتاج تحسيناً</span></label>
+          <label class="rb"><input type="radio" name="d4" value="3"><span class="rl">3.5 – 4.0 ⭐</span></label>
+          <label class="rb"><input type="radio" name="d4" value="4"><span class="rl">4.0 – 4.5 ⭐</span></label>
+          <label class="rb"><input type="radio" name="d4" value="5"><span class="rl">أكثر من 4.5 ⭐ — ممتاز</span></label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>كم مرة تراجع تقارير الأداء المتاحة من منصات التوصيل (مبيعات، تقييمات، إلغاءات)؟</label>
+        <div class="rg c2">
+          <label class="rb"><input type="radio" name="d5" value="5"><span class="rl">أسبوعياً أو أكثر</span></label>
+          <label class="rb"><input type="radio" name="d5" value="4"><span class="rl">شهرياً</span></label>
+          <label class="rb"><input type="radio" name="d5" value="2"><span class="rl">نادراً — بدون انتظام</span></label>
+          <label class="rb"><input type="radio" name="d5" value="1"><span class="rl">لا أعلم بوجود هذه التقارير</span></label>
+        </div>
+      </div>
+
+    </div>
+      </div><!-- /d2-to-d5 -->
+    <div class="nav-row">
+      <button class="btn-back" onclick="back(5)">→ رجوع</button>
+      <button class="btn-next" onclick="go(6)">التالي ←</button>
+    </div>
+  </div>
+</div>
+
 <div id="sc-6" class="screen">
   <div class="prog-wrap">
     <div class="prog-top"><span class="prog-name">الخطوة الأخيرة</span><span class="prog-pct">100%</span></div>
     <div class="prog-bar"><div class="prog-fill" style="width:100%"></div></div>
-    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>المنيو</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep done"><span class="pdot"></span>الطلبات</span><span class="pstep done"><span class="pdot"></span>الخسائر</span><span class="pstep active"><span class="pdot"></span>الاستلام</span></div>
+    <div class="prog-steps"><span class="pstep done"><span class="pdot"></span>المشروع</span><span class="pstep done"><span class="pdot"></span>الأصناف</span><span class="pstep done"><span class="pdot"></span>التشغيل</span><span class="pstep done"><span class="pdot"></span>الطلبات</span><span class="pstep done"><span class="pdot"></span>الخسائر</span><span class="pstep done"><span class="pdot"></span>التوصيل</span><span class="pstep active"><span class="pdot"></span>الاستلام</span></div>
   </div>
   <div class="card">
     <div class="card-hdr"><div class="ibadge">الخطوة الأخيرة</div><div class="ititle">استلام نتيجة التقييم</div><div class="ibody">ستظهر نتيجتك الأولية فوراً — التقرير المفصل يصلك عبر واتساب.</div></div>
     <div class="card-body">
       <div class="field"><label><span class="req">*</span>رقم الجوال (واتساب)</label><input type="tel" id="fphone" placeholder="05XXXXXXXX"><div class="err" id="ephone">أدخل رقم جوال صحيح</div></div>
-      <div class="field"><label>نوع التقرير المطلوب</label><div class="rg c2"><label class="rb"><input type="radio" name="rtype" value="تقرير تشخيصي أساسي" checked><span class="rl">تقرير تشخيصي</span></label><label class="rb"><input type="radio" name="rtype" value="تقرير + استشارة تطوير"><span class="rl">تقرير + استشارة</span></label></div></div>
+      <div class="field">
+        <label>اختر ما يناسبك</label>
+        <div class="pkg-grid">
+          <label class="pkg-card">
+            <input type="radio" name="rtype" value="تقرير تشخيصي أساسي" checked>
+            <div class="pkg-body">
+              <div class="pkg-name">مِثال الأساسي</div>
+              <div class="pkg-desc">نتيجتك الآن + أبرز نقاط القوة + أكبر فرصة أمامك + توصية واحدة قابلة للتطبيق هذا الأسبوع</div>
+              <div class="pkg-tag">مجاني</div>
+            </div>
+          </label>
+          <label class="pkg-card">
+            <input type="radio" name="rtype" value="تقرير + استشارة تطوير">
+            <div class="pkg-body">
+              <div class="pkg-name">مِثال + استشارة</div>
+              <div class="pkg-desc">كل ما في الأساسي + جلسة مع مستشار ليدار + خطة تحسين مخصصة لمشروعك</div>
+              <div class="pkg-tag">بالتواصل عبر واتساب</div>
+            </div>
+          </label>
+        </div>
+      </div>
       <div class="field"><label>أفضل وقت للتواصل</label><div class="rg c3"><label class="rb"><input type="radio" name="ctime" value="صباحاً"><span class="rl">صباحاً</span></label><label class="rb"><input type="radio" name="ctime" value="مساءً"><span class="rl">مساءً</span></label><label class="rb"><input type="radio" name="ctime" value="أي وقت"><span class="rl">أي وقت</span></label></div></div>
-      <div class="btn-row"><button class="btn-p" id="submit-btn" onclick="doSubmit()">عرض نتيجتي الآن ←</button><button class="btn-s" onclick="back(5)">→ رجوع</button></div>
+      <div class="btn-row"><button class="btn-p" id="submit-btn" onclick="doSubmit()">عرض نتيجتي الآن ←</button><button class="btn-s" onclick="show('sc-5b')">→ رجوع</button></div>
     </div>
   </div>
 </div>
@@ -650,16 +952,24 @@ input::placeholder{color:var(--text3);}
     </div>
     <div class="res-verdict" id="rverdict"></div>
     <div class="res-note" id="rnote"></div>
+    <div class="res-framing" id="rframing"></div>
   </div>
-  <div class="fin-card">
-    <div class="fin-icon">📉</div>
-    <div><div class="fin-label">الخسارة الشهرية المقدرة من الثغرات الحالية</div><div class="fin-amount" id="rfin"></div><div class="fin-sub">محسوبة من إجاباتك ومتوسطات قطاع الأغذية السعودي</div></div>
-  </div>
+  <div class="fin-card" id="fin-card" style="display:none;"></div>
   <div class="axes-sec" id="raxes"></div>
-  <div class="send-status" id="send-status"></div>
-  <div class="wait-box">
+  <div id="rflags" style="margin:12px 0;"></div>
+  <div id="rep-strengths" class="rep-section" style="display:none;"></div>
+  <div id="rep-opportunity" class="rep-section" style="display:none;"></div>
+  <div id="rep-recommendations" class="rep-section" style="display:none;"></div>
+  <div class="disclaimer-box">هذا التقرير تشخيص استشاري مبني على إجاباتك ولا يُمثّل تدقيقاً مالياً أو تنظيمياً أو قانونياً، ويُستخدم لدعم قرارات التحسين والتطوير.</div>
+  <div id="send-status" style="display:none;"></div>
+  <div class="wait-box" id="wait-box">
     <div class="wait-icon">📋</div>
-    <div><div class="wait-t">تقريرك المفصل في الطريق</div><div class="wait-s">سيصلك عبر واتساب تقرير تشخيصي مخصص لمشروعك يتضمن أولويات التدخل والتوصيات القابلة للتطبيق مع الإطار الزمني لكل إجراء.</div></div>
+    <div><div class="wait-t" id="wait-title">سيتواصل معك فريق ليدار</div><div class="wait-s" id="wait-sub">تم استلام بياناتك — سيتواصل معك أحد مستشاري ليدار لمناقشة نتيجتك وخطوات التطوير.</div></div>
+  </div>
+  <div id="consult-btn-wrap" style="display:none;margin-bottom:14px;">
+    <a href="https://wa.me/966504743117?text=السلام%20عليكم،%20أجريت%20تقييم%20MITHAL%20وأرغب%20في%20الاستشارة" target="_blank" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;border-radius:12px;padding:14px 24px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 2px 8px rgba(37,211,102,.3);">
+      <span>📲</span> احجز استشارتك عبر واتساب
+    </a>
   </div>
 </div>
 
@@ -667,24 +977,134 @@ input::placeholder{color:var(--text3);}
 
 <script>
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbxjnZvCbf1JKDRuv8STZJCm3tSHtLoVmLjcdMDABW1jJmUjr9IjpxscCaB4GWF7HNnw/exec';
+// ── ACCESS CODES — TRANSITIONAL NOTE ─────────────────────────────────────
+// v1.2 (current): Static codes for controlled Beta only.
+// Before public Beta: Move CODES to Google Sheet column and validate via API.
+// Migration path:
+//   1. Add 'codes' tab to the linked Google Sheet
+//   2. Replace CODES.includes(code) with: fetch(SCRIPT_URL+'?action=validateCode&code='+code)
+//   3. This removes codes from client-side source entirely.
+// Do NOT distribute current access codes publicly.
 const CODES=['1234','5678','9012','3456'];
 let accessCode='';
+
+
+// ── REPORT GENERATION ────────────────────────────────────────────────────────
+function generateReport(scores, rawVals) {
+  const {sM, sI, sT, sHAL, sD} = scores;
+  const axes = [
+    {key:'M', name:'قائمة الأصناف والأسعار',    score:sM},
+    {key:'I', name:'تشغيل المشروع',      score:sI},
+    {key:'T', name:'جودة الطلبات',        score:sT},
+    {key:'HAL', name:'الأرباح الخفية',   score:sHAL},
+    {key:'D', name:'التوصيل الرقمي',     score:sD},
+  ];
+  const sorted = [...axes].sort((a,b)=>b.score-a.score);
+  const weakest = sorted[sorted.length-1];
+
+  // ── STRENGTHS — 3 tiers per axis, no generic fallback ──────
+  const strengthLibrary = {
+    M: (s)=> s>=65
+      ? 'قائمة أصنافك منظم وأسعارك واضحة — هذا يبني ثقة عميلك قبل أن يطلب.'
+      : s>=40
+      ? 'عندك قائمة أصناف محددة المعالم — وهذا يجعل العميل يعرف ماذا يتوقع منك.'
+      : 'مشروعك يقدم منتجاً واضحاً — التركيز على أفضل ما تصنعه يصنع الفرق.',
+    I: (s)=> s>=65
+      ? 'تشغيلك اليومي فيه نظام وانتظام يحمي جودة خدمتك.'
+      : s>=40
+      ? 'مشروعك يعمل يومياً ويخدم عملاء — وهذا يعني أن الأساس التشغيلي موجود.'
+      : 'استمرار مشروعك رغم التحديات يدل على قدرة حقيقية على إدارة الضغط.',
+    T: (s)=> s>=65
+      ? 'طلباتك تصل بدقة وفي وقتها — وهذا ما يصنع الزبون الدائم.'
+      : s>=40
+      ? 'عملاؤك يصلهم طلبهم وهذا هو الأساس — التحسين من هنا يزيد رضاهم.'
+      : 'مشروعك يخدم عملاء يومياً — أي تحسين في وقت التجهيز سيُلاحظه العميل فوراً.',
+    HAL: (s)=> s>=60
+      ? 'وعيك المالي بمشروعك يساعدك على اكتشاف الفرص قبل غيرك.'
+      : s>=35
+      ? 'تُدرك أن المشروع يحتاج متابعة مالية — هذا الوعي هو نقطة البداية الصحيحة.'
+      : 'الشعور بأن الأرباح أقل مما ينبغي هو أول خطوة نحو اكتشاف مكامن الخسارة.',
+    D: (s)=> s===50
+      ? 'تركيزك على الخدمة المباشرة يبني ولاء عملائك بشكل أعمق من أي منصة.'
+      : s>=60
+      ? 'حضورك الرقمي يُعطيك قناة مبيعات إضافية تعمل بدونك.'
+      : s>=35
+      ? 'وجودك على منصات التوصيل يعني أن عملاءك يجدونك — التحسين من هنا مباشر.'
+      : null,
+  };
+  const strengths = axes.map(a=> strengthLibrary[a.key]?.(a.score)).filter(Boolean);
+  const topStrengths = strengths.slice(0,3);
+  // If fewer than 2 strengths, add context-specific one based on total
+  if(topStrengths.length < 2){
+    if(total>=50) topStrengths.push('قرارك بتقييم مشروعك هو نفسه دليل على الجدية — أصحاب المشاريع الناجحة يقيّمون ويحسّنون.');
+    else topStrengths.push('الوعي بمواطن الضعف في مشروعك هو الخطوة الأولى والأصعب — وأنت قطعتها.');
+  }
+
+  const sDiv = document.getElementById('rep-strengths');
+  if(sDiv && topStrengths.length>0){
+    sDiv.style.display='block';
+    sDiv.innerHTML = `<div class="rep-title">⭐ ما يميّز مشروعك</div>` +
+      topStrengths.map(t=>`<div class="strength-item"><div class="strength-icon">✓</div><div>${t}</div></div>`).join('');
+  }
+
+  // ── OPPORTUNITY ───────────────────────────────────────────
+  const opportunityLibrary = {
+    M: 'قائمة أصنافك يحتاج مراجعة — بعض المنتجات قد تأكل من أرباحك دون أن تشعر. معرفة أي منتجاتك يربح فعلاً هي الخطوة الأولى.',
+    I: 'مشروعك يعتمد كثيراً على وجودك الشخصي. بناء نظام عمل يشتغل حتى في غيابك يُحوّل المشروع من وظيفة إلى منشأة.',
+    T: 'طريقة وصول الطلب للعميل تحتاج تحسيناً. تأخير أو أخطاء في الطلبات تجعل العميل لا يعود حتى لو أحب ما أكله.',
+    HAL: 'فيه أرباح تضيع بهدوء في مشروعك. هدر في المواد، أو منتجات لا تُباع كما ينبغي — هذه النقطة إذا عالجتها ستشعر بفرق حقيقي.',
+    D: 'حضورك على منصات التوصيل يحتاج تطوير. تحسين تقييمك أو تقليل الإلغاء تأثيره مباشر على طلباتك القادمة.',
+  };
+  const oppText = opportunityLibrary[weakest.key] || 'مشروعك فيه فرص تحسين واضحة في أكثر من جانب.';
+  const oDiv = document.getElementById('rep-opportunity');
+  if(oDiv){
+    oDiv.style.display='block';
+    oDiv.innerHTML = `<div class="rep-title">🎯 أكبر فرصة أمامك</div><div class="opp-text">${oppText}</div>`;
+  }
+
+  // ── RECOMMENDATIONS ───────────────────────────────────────
+  const recLibrary = {
+    M: {head:'راجع قائمة أصنافك هذا الأسبوع', body:'حدد المنتجات التي لا تُباع بانتظام. كل منتج لا يُباع 5 مرات يومياً يستهلك وقتك وتكلفتك.', action:'هذا الأسبوع: عدّ منتجاتك الراكدة'},
+    I: {head:'اكتب 5 تعليمات تشغيلية', body:'ما يجب أن يحدث في مشروعك كل يوم — حتى لو لم تكن موجوداً. ابدأ بالنظافة والاستقبال.', action:'هذا الأسبوع: اكتب أول 3 تعليمات'},
+    T: {head:'اضبط وقت تجهيز كل طلب', body:'حدد وقتاً مستهدفاً لكل فئة طلبات. الوقت الواضح يضغط على الفريق بشكل إيجابي.', action:'هذا الأسبوع: قس متوسط وقت 10 طلبات'},
+    HAL: {head:'احسب هدرك اليومي لثلاثة أيام', body:'اكتب ما يُلقى أو لا يُستخدم يومياً لمدة 3 أيام. حتى التقدير يكفي للبدء.', action:'هذا الأسبوع: ابدأ يومياتك للهدر'},
+    D: {head:'راجع تقرير أداء منصاتك', body:'كل منصة توصيل فيها تقرير مجاني — نسبة إلغاء وتقييم ووقت استلام. افتحه هذا الأسبوع.', action:'هذا الأسبوع: افتح تقرير منصتك'},
+  };
+
+  // Build 3 recommendations: weakest axis + 2nd weakest + a fixed operational one
+  const recAxes = sorted.slice(-3).reverse();
+  const recs = recAxes.map(a=> recLibrary[a.key]).filter(Boolean).slice(0,3);
+  if(recs.length < 1) recs.push({head:'راجع إجاباتك مع مستشار', body:'جلسة واحدة مع مستشار ليدار تساعدك على تحديد أولوياتك بدقة.', action:'احجز جلسة مجانية'});
+
+  const rDiv = document.getElementById('rep-recommendations');
+  if(rDiv && recs.length>0){
+    rDiv.style.display='block';
+    rDiv.innerHTML = `<div class="rep-title">📋 ماذا تفعل الآن؟</div>` +
+      recs.map((r,i)=>`
+        <div class="rec-item">
+          <div class="rec-num">${i+1}</div>
+          <div class="rec-head">${r.head}</div>
+          <div class="rec-body">${r.body}</div>
+          <span class="rec-action">← ${r.action}</span>
+        </div>`).join('');
+  }
+}
 
 function buildLikerts(){
   const lks=[
     {id:'lk-m3',name:'m3',inv:true},{id:'lk-m4',name:'m4',inv:true},
-    {id:'lk-i1',name:'i1',inv:false},{id:'lk-i2',name:'i2',inv:false},
-    {id:'lk-i3',name:'i3',inv:false},{id:'lk-i4',name:'i4',inv:true},
+    {id:'lk-i1',name:'i1',inv:true},
+    {id:'lk-i3',name:'i3',inv:true},{id:'lk-i4',name:'i4',inv:true},
     {id:'lk-t1',name:'t1',inv:false},{id:'lk-t2',name:'t2',inv:true},
     {id:'lk-t4',name:'t4',inv:true},
     {id:'lk-h1',name:'h1',inv:false},{id:'lk-h2',name:'h2',inv:false},
-    {id:'lk-h3',name:'h3',inv:true},{id:'lk-h4',name:'h4',inv:true},
+    {id:'lk-h4',name:'h4',inv:true},
   ];
   lks.forEach(({id,name,inv})=>{
     const w=document.getElementById(id);if(!w)return;
     for(let i=1;i<=5;i++){
       const sc=inv?(6-i):i;
-      w.innerHTML+=`<label class="lo"><input type="radio" name="${name}" value="${sc}"><div class="lo-dot">${i}</div><div class="lo-num">${i}</div></label>`;
+      w.innerHTML+=`<label class="lo"><input type="radio" name="${name}" value="${sc}"><div class="lo-dot">${i}</div></label>`;
     }
   });
 }
@@ -704,21 +1124,90 @@ document.querySelectorAll('input[name="city"]').forEach(r=>{
   r.addEventListener('change',()=>{document.getElementById('city-other-f').className='hidden-f'+(r.value==='أخرى'?' show':'');});
 });
 function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function checkRequired(names){
+  let ok=true;
+  names.forEach(n=>{
+    const answered=document.querySelector(`input[name="${n}"]:checked`);
+    if(!answered){
+      ok=false;
+      // highlight unanswered
+      const inputs=document.querySelectorAll(`input[name="${n}"]`);
+      if(inputs.length>0){
+        const wrap=inputs[0].closest('.likert-wrap,.rg,.field');
+        if(wrap){wrap.style.border='2px solid #dc2626';setTimeout(()=>{wrap.style.border='';},2000);}
+      }
+    }
+  });
+  if(!ok){alert('يرجى الإجابة على جميع الأسئلة قبل المتابعة');}
+  return ok;
+}
 function go(step){
   if(step===1){
     const nm=document.getElementById('fn').value.trim();
     const ac=document.querySelector('input[name="act"]:checked');
     const cy=document.querySelector('input[name="city"]:checked');
+    const st=document.querySelector('input[name="status"]:checked');
     let ok=true;
     document.getElementById('en').style.display=nm?'none':'block';if(!nm)ok=false;
     document.getElementById('eact').style.display=ac?'none':'block';if(!ac)ok=false;
     document.getElementById('ecity').style.display=cy?'none':'block';if(!cy)ok=false;
+    document.getElementById('estatus')||null;if(!st)ok=false;
     if(ok)show('sc-2');
+    else if(!ok)alert('يرجى الإجابة على جميع الأسئلة المطلوبة');
+  }else if(step===2){
+    if(checkRequired(['m1','m2','m3','m4','m5']))show('sc-3');
+  }else if(step===3){
+    if(checkRequired(['i1','i2','i3','i4','i5']))show('sc-4');
+  }else if(step===4){
+    if(checkRequired(['t1','t2','t3','t4']))show('sc-5');
+  }else if(step===5){
+    if(checkRequired(['h1','h2','h3','h4','h5','rev']))show('sc-5b');
+  }else if(step===6){
+    const d1Skip=getVal('d1')==='1'||getVal('d1')==='2';
+    const d6Fields=d1Skip?['d1']:['d1','d2','d3','d4','d5'];
+    if(checkRequired(d6Fields))show('sc-6');
   }else{show('sc-'+(step+1));}
 }
 function back(s){show('sc-'+s);}
 function getVal(n){const e=document.querySelector(`input[name="${n}"]:checked`);return e?e.value:'';}
-function axScore(ns){let t=0,c=0;ns.forEach(n=>{const e=document.querySelector(`input[name="${n}"]:checked`);if(e){t+=parseInt(e.value);c++;}});return c>0?Math.round((t/(c*5))*100):0;}
+function axScore(ns){let t=0;ns.forEach(n=>{const e=document.querySelector(`input[name="${n}"]:checked`);t+=e?parseInt(e.value):3;});return Math.round((t/(ns.length*5))*100);}
+
+
+// ── VALIDATION LAYER v1.2 ──────────────────────────────────────────────────
+function runValidationLayer(rawVals, scores){
+  const flags=[];
+  // F1: معرفة الهامش مع غياب المتابعة
+  const h1v=parseInt(rawVals.h1)||0, h2v=parseInt(rawVals.h2)||0;
+  if(h1v>=4&&h2v<=2)flags.push('F_H1H2');
+  // F2: لا أخطاء مع تعويضات كثيرة
+  const t2v=parseInt(rawVals.t2)||0, t3v=rawVals.t3;
+  if(t2v>=4&&t3v==='1')flags.push('F_T2T3');
+  // F3: غياب التوثيق مع درجة تشغيل عالية
+  const i3v=parseInt(rawVals.i3)||0;
+  if(i3v<=2&&scores.sI>=80)flags.push('F_I3High');
+  // F4: إلغاء مرتفع مع تقييم ممتاز
+  const d3v=rawVals.d3, d4v=rawVals.d4;
+  if(d3v==='2'&&d4v==='5')flags.push('F_D3D4');
+  // F5: معرفة مالية مع هدر مرتفع
+  const h1lv=parseInt(rawVals.h1)||0, h4lv=parseInt(rawVals.h4)||0;
+  if(h1lv>=4&&h4lv<=2)flags.push('F_H1H4');
+  return flags.slice(0,2); // max 2 flags shown
+}
+
+const FLAG_MSGS={
+  F_H1H2:'لاحظنا تبايناً في محور الأرباح الخفية بين معرفة الهامش ومتابعة التكاليف — يُنصح بمراجعة هذا الجانب مع مستشارك.',
+  F_T2T3:'لاحظنا تبايناً في محور تدفق الطلبات بين مستوى الأخطاء والتعويضات — يُنصح بمراجعة مؤشرات الدقة.',
+  F_I3High:'درجتك في محور التشغيل مرتفعة مع غياب الإجراءات الموثقة — توثيق ممارساتك الحالية يضمن استدامتها.',
+  F_D3D4:'لاحظنا تبايناً في مؤشرات التوصيل — إلغاء أعلى من 10% يؤثر عادةً على التقييم على المنصات.',
+  F_H1H4:'لاحظنا تبايناً في محور الأرباح الخفية — معرفة الهامش مع هدر مرتفع تُشير إلى فرصة تحسين فورية.'
+};
+
+function calcD(){
+  const d1Val=parseInt(getVal('d1'));
+  if(d1Val===1)return 50;   // لا يستخدم التوصيل — محايد
+  if(d1Val===2)return 40;   // يبدأ قريباً — جاهزية منخفضة
+  return axScore(['d2','d3','d4','d5']);  // مستخدم فعلي
+}
 function doSubmit(){
   const ph=document.getElementById('fphone').value.trim();
   if(!ph||ph.length<10){document.getElementById('ephone').style.display='block';return;}
@@ -734,45 +1223,116 @@ function doSubmit(){
   const sI=axScore(['i1','i2','i3','i4']);
   const sT=axScore(['t1','t2','t3','t4']);
   const sHAL=axScore(['h1','h2','h3','h4']);
-  // إذا محور واحد على الأقل مُجاب، احسب المجموع — وإلا ضع 50 كقيمة افتراضية
-  const answeredAxes=[sM,sI,sT,sHAL].filter(s=>s>0);
-  const rawTotal=sM*0.20+sI*0.25+sT*0.20+sHAL*0.35;
-  const total=answeredAxes.length>0?Math.min(Math.max(Math.round(rawTotal),1),100):50;
-  const lossRaw=rev*30*(100-total)/100*0.16/100;
-  const loss=isNaN(lossRaw)||!isFinite(lossRaw)?0:Math.round(lossRaw/100)*100;
-  let cl;if(total>=80)cl='منشأة متميزة';else if(total>=60)cl='وضع مستقر';else if(total>=40)cl='يحتاج تدخلاً';else cl='منطقة خطر';
-  const payload={accessCode,projectName:nm,activityType:act,city,region,branches:getVal('branches'),projectAge:getVal('age'),projectStatus:getVal('status'),employees:getVal('emp'),m1:getVal('m1'),m2:getVal('m2'),m3:getVal('m3'),m4:getVal('m4'),m5:getVal('m5'),i1:getVal('i1'),i2:getVal('i2'),i3:getVal('i3'),i4:getVal('i4'),i5:getVal('i5'),t1:getVal('t1'),t2:getVal('t2'),t3:getVal('t3'),t4:getVal('t4'),h1:getVal('h1'),h2:getVal('h2'),h3:getVal('h3'),h4:getVal('h4'),h5:getVal('h5'),h6_revenue:getVal('rev'),score_M:sM,score_I:sI,score_T:sT,score_HAL:sHAL,score_total:total,classification:cl,phone:ph,reportType:getVal('rtype'),contactTime:getVal('ctime'),estimatedLoss:loss};
-  showResult(nm,act,total,sM,sI,sT,sHAL,loss);
-  fetch(SCRIPT_URL,{method:'POST',body:JSON.stringify(payload)}).then(r=>r.json()).then(d=>{const st=document.getElementById('send-status');if(d.success){st.style.background='#dcfce7';st.style.color='#15803d';st.textContent='✓ تم حفظ بياناتك — رقم جلستك: '+d.sessionId;}else{st.textContent='تم عرض النتيجة — سيتواصل معك الفريق قريباً';}}).catch(()=>{document.getElementById('send-status').textContent='تم عرض النتيجة — سيتواصل معك الفريق قريباً';});
+  const sD=calcD();
+  const total=Math.min(Math.max(Math.round(sM*0.18+sI*0.22+sT*0.18+sHAL*0.27+sD*0.15),1),100);
+  const loss=0; // v1.2: مؤشر الخسارة محذوف من التقرير — H6-REV يُجمَع فقط
+  let cl;if(total>=80)cl='منشأة متميزة';else if(total>=60)cl='وضع تشغيلي مستقر';else if(total>=40)cl='يحتاج تدخلاً تشغيلياً';else cl='منطقة خطر تشغيلي';
+  const payload={accessCode,projectName:nm,activityType:act,city,region,branches:getVal('branches'),projectAge:getVal('age'),projectStatus:getVal('status'),employees:getVal('emp'),m1:getVal('m1'),m2:getVal('m2'),m3:getVal('m3'),m4:getVal('m4'),m5:getVal('m5'),i1:getVal('i1'),i2:getVal('i2'),i3:getVal('i3'),i4:getVal('i4'),i5:getVal('i5'),
+      i6_calories:document.getElementById('i6-cal')?document.getElementById('i6-cal').checked:false,
+      i6_allergens:document.getElementById('i6-all')?document.getElementById('i6-all').checked:false,
+      i6_none:document.getElementById('i6-none')?document.getElementById('i6-none').checked:false,t1:getVal('t1'),t2:getVal('t2'),t3:getVal('t3'),t4:getVal('t4'),h1:getVal('h1'),h2:getVal('h2'),h3:getVal('h3'),h4:getVal('h4'),h5:getVal('h5'),h6_revenue:getVal('rev'),score_M:sM,score_I:sI,score_T:sT,score_HAL:sHAL,score_D:sD,score_total:total,d1:getVal('d1'),d2:getVal('d2'),d3:getVal('d3'),d4:getVal('d4'),d5:getVal('d5'),classification:cl,phone:ph,reportType:getVal('rtype'),contactTime:getVal('ctime')};
+  showResult(nm,act,total,sM,sI,sT,sHAL,sD,loss);
+  fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)}).then(()=>{/* saved — opaque response with no-cors */}).catch(()=>{/* fail silently */});
 }
-function showResult(nm,act,total,sM,sI,sT,sHAL,loss){
+function showResult(nm,act,total,sM,sI,sT,sHAL,sD,loss){
   show('sc-result');
+  document.getElementById('rframing').textContent='التصنيفات المُعتمدة أولية مبنية على حكم خبراء وستُراجَع بعد توافر بيانات ميدانية كافية.';
+  // Show WhatsApp button only if consultation selected
+  const rtype=getVal('rtype');
+  if(rtype==='تقرير + استشارة تطوير'){
+    document.getElementById('consult-btn-wrap').style.display='block';
+  }
   document.getElementById('rproj').textContent=act+' | '+nm;
-  let v,n;
-  if(total>=80){v='منشأة متميزة ✦';n='أداؤك يتجاوز معيار السوق مع فرص تحسين استراتيجية';}
-  else if(total>=60){v='وضع تشغيلي مستقر';n='ثغرات محددة تحتاج معالجة خلال 60 يوماً';}
-  else if(total>=40){v='يحتاج تدخلاً تشغيلياً';n='خسائر مستمرة تؤثر على كفاءتك وأرباحك';}
-  else{v='منطقة خطر تشغيلي ⚠';n='تدخل فوري ضروري — خطر على استمرارية المشروع';}
+  // Dynamic verdict + note based on weakest axis
+  let v;
+  if(total>=80)v='منشأة متميزة ✦';
+  else if(total>=60)v='وضع تشغيلي مستقر';
+  else if(total>=40)v='يحتاج تدخلاً تشغيلياً';
+  else v='منطقة خطر تشغيلي ⚠';
   document.getElementById('rverdict').textContent=v;
-  document.getElementById('rnote').textContent=n;
-  document.getElementById('rfin').textContent=loss>0?loss.toLocaleString('ar-SA')+' ريال / شهرياً':'يحتاج مراجعة بياناتك';
+
+  // Find weakest axis for personalized note
+  const axScores=[
+    {key:'M',score:sM},{key:'I',score:sI},{key:'T',score:sT},
+    {key:'HAL',score:sHAL},{key:'D',score:sD=== 50||sD===40?999:sD}
+  ];
+  const weakAxis=axScores.reduce((a,b)=>a.score<b.score?a:b).key;
+  const noteMap={
+    M:'قائمة أصنافك وتسعيرك يحتاجان مراجعة — بعض المنتجات قد تأكل من أرباحك دون أن تلاحظ.',
+    I:'مشروعك يعتمد على وجودك الشخصي أكثر مما ينبغي — بناء نظام تشغيلي يحمي استمراريته.',
+    T:'طريقة وصول الطلب للعميل تؤثر على تجربته — تحسين هذا الجانب يبني الزبون الدائم.',
+    HAL:'فيه أرباح تضيع بهدوء في مشروعك — الهدر وضعف المتابعة المالية أكبر مصادرها.',
+    D:'حضورك الرقمي على منصات التوصيل يحتاج تطوير — الأداء الضعيف فيه يكلّفك طلبات.',
+  };
+  const noteMapHigh={
+    M:'قائمة أصنافك منظم وأسعارك واضحة — ركّز الآن على رفع هامش ربحك من المنتجات الأكثر مبيعاً.',
+    I:'تشغيلك اليومي منتظم — الخطوة التالية هي بناء نظام يعمل بكفاءة حتى في غيابك.',
+    T:'طلباتك تصل بدقة — فرصتك الآن في تقليل وقت التجهيز وتحسين أوقات الذروة.',
+    HAL:'وعيك المالي جيد — ركّز على تقليل الهدر وتحديد منتجاتك الأكثر ربحاً فعلياً.',
+    D:'حضورك الرقمي يعمل — رفع تقييمك وتقليل الإلغاء يضاعف طلباتك القادمة.',
+  };
+  const n=total>=60?noteMapHigh[weakAxis]:noteMap[weakAxis];
+  document.getElementById('rnote').textContent=n||'مشروعك يملك فرصاً حقيقية للتحسين في أكثر من جانب.';
+  // v1.2: مؤشر الخسارة محذوف من التقرير
   setTimeout(()=>{
     const arc=document.getElementById('sarc'),sn=document.getElementById('snum');
     arc.style.transition='stroke-dashoffset 1.5s cubic-bezier(.16,1,.3,1)';
     arc.style.strokeDashoffset=276.5-(total/100)*276.5;
-    const safTotal=Math.min(Math.max(total,0),100);
+    const safTotal=isNaN(total)?50:Math.min(Math.max(Math.round(total),1),100);
     let cur=0;const iv=setInterval(()=>{cur+=2;if(cur>=safTotal){cur=safTotal;clearInterval(iv);}sn.textContent=cur;},24);
   },200);
-  const axes=[{name:'المنيو والتسعير',letter:'M',score:sM},{name:'التشغيل الداخلي',letter:'I',score:sI},{name:'تدفق الطلبات',letter:'T',score:sT},{name:'الخسائر الخفية',letter:'HAL',score:sHAL}];
+  const axes=[{name:'قائمة الأصناف والتسعير',letter:'M',score:sM},{name:'التشغيل الداخلي',letter:'I',score:sI},{name:'تدفق الطلبات',letter:'T',score:sT},{name:'الأرباح الخفية',letter:'HAL',score:sHAL},{name:'الأداء الرقمي',letter:'D',score:sD,digi:true}];
   const ax=document.getElementById('raxes');ax.innerHTML='';
   axes.forEach((a,i)=>{
     const s=a.score;let col,bt,bc;
     if(s>=75){col='#15803d';bt='جيد';bc='bg';}else if(s>=50){col='#b45309';bt='متوسط';bc='bw';}else{col='#dc2626';bt='يحتاج تدخل';bc='bd';}
     const r=document.createElement('div');r.className='axis-row';
-    r.innerHTML=`<div class="axis-lt">${a.letter}</div><div class="axis-nm">${a.name}</div><div class="axis-bw"><div class="axis-bar"><div class="axis-bf" id="ab${i}" style="width:0%;background:${col}"></div></div></div><div class="axis-pct" style="color:${col}">${s}%</div><span class="badge ${bc}">${bt}</span>`;
+    const ltBg=a.digi?'background:#2d6a4f':'';r.innerHTML=`<div class="axis-lt" style="${ltBg}">${a.letter}</div><div class="axis-nm">${a.name}</div><div class="axis-bw"><div class="axis-bar"><div class="axis-bf" id="ab${i}" style="width:0%;background:${col}"></div></div></div><div class="axis-pct" style="color:${col}">${s}%</div><span class="badge ${bc}">${bt}</span>`;
     ax.appendChild(r);setTimeout(()=>{document.getElementById('ab'+i).style.width=s+'%';},400+i*180);
   });
+
+  // Validation Layer
+  const rawVals={h1:getVal('h1'),h2:getVal('h2'),t2:getVal('t2'),t3:getVal('t3'),i3:getVal('i3'),d3:getVal('d3'),d4:getVal('d4'),h4:getVal('h4')};
+  generateReport({sM,sI,sT,sHAL,sD}, rawVals);
+  const activeFlags=typeof runValidationLayer==='function'?runValidationLayer(rawVals,{sI}):[]; 
+  const flagsDiv=document.getElementById('rflags');
+  if(flagsDiv){flagsDiv.innerHTML='';activeFlags.forEach(f=>{if(FLAG_MSGS&&FLAG_MSGS[f]){const d=document.createElement('div');d.className='flag-note';d.textContent='💡 '+FLAG_MSGS[f];flagsDiv.appendChild(d);}});}
 }
+
+// ── D-axis skip logic ──────────────────────────────────────────────────────
+function handleD1Change() {
+  const d1Val = document.querySelector('input[name="d1"]:checked');
+  const skipNote = document.getElementById('d-skip-note');
+  const d2to5 = document.getElementById('d2-to-d5');
+  
+  if (d1Val && d1Val.value === '1') {
+    // No delivery — hide D2-D5, show skip note, set neutral values
+    if (d2to5) d2to5.style.display = 'none';
+    if (skipNote) skipNote.style.display = 'block';
+    // Auto-set neutral values for D2-D5 so checkRequired passes
+    ['d2','d3','d4','d5'].forEach(name => {
+      const existing = document.querySelector('input[name="' + name + '"]:checked');
+      if (!existing) {
+        const neutralVals = {d2:'1', d3:'5', d4:'3', d5:'3'};
+        const inputs = document.querySelectorAll('input[name="' + name + '"]');
+        inputs.forEach(inp => {
+          if (inp.value === neutralVals[name]) {
+            inp.checked = true;
+          }
+        });
+      }
+    });
+  } else {
+    if (d2to5) d2to5.style.display = 'block';
+    if (skipNote) skipNote.style.display = 'none';
+  }
+}
+
+// Attach listener to all d1 radios
+document.querySelectorAll('input[name="d1"]').forEach(r => {
+  r.addEventListener('change', handleD1Change);
+});
+
 </script>
 </body>
 </html>
