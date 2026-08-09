@@ -634,6 +634,11 @@ input::placeholder{color:var(--text3);}
         <div class="err" id="en">هذا الحقل مطلوب</div>
       </div>
       <div class="field">
+        <label>رقم السجل التجاري (اختياري)</label>
+        <input type="text" inputmode="numeric" id="fcr" placeholder="مثال: 1010xxxxxx">
+        <div class="hint" style="font-size:12px;color:var(--teal);margin-top:6px;">يساعد مِثال على متابعة تطور منشأتك عبر الزمن</div>
+      </div>
+      <div class="field">
         <label><span class="req">*</span>نوع النشاط</label>
         <div class="rg c3">
           <label class="rb"><input type="radio" name="act" value="كوفي"><span class="rl">☕ كوفي</span></label>
@@ -1230,7 +1235,7 @@ function doSubmit(){
   const payload={accessCode,projectName:nm,activityType:act,city,region,branches:getVal('branches'),projectAge:getVal('age'),projectStatus:getVal('status'),employees:getVal('emp'),m1:getVal('m1'),m2:getVal('m2'),m3:getVal('m3'),m4:getVal('m4'),m5:getVal('m5'),i1:getVal('i1'),i2:getVal('i2'),i3:getVal('i3'),i4:getVal('i4'),i5:getVal('i5'),
       i6_calories:document.getElementById('i6-cal')?document.getElementById('i6-cal').checked:false,
       i6_allergens:document.getElementById('i6-all')?document.getElementById('i6-all').checked:false,
-      i6_none:document.getElementById('i6-none')?document.getElementById('i6-none').checked:false,t1:getVal('t1'),t2:getVal('t2'),t3:getVal('t3'),t4:getVal('t4'),h1:getVal('h1'),h2:getVal('h2'),h3:getVal('h3'),h4:getVal('h4'),h5:getVal('h5'),h6_revenue:getVal('rev'),score_M:sM,score_I:sI,score_T:sT,score_HAL:sHAL,score_D:sD,score_total:total,d1:getVal('d1'),d2:getVal('d2'),d3:getVal('d3'),d4:getVal('d4'),d5:getVal('d5'),classification:cl,phone:ph,reportType:getVal('rtype'),contactTime:getVal('ctime')};
+      i6_none:document.getElementById('i6-none')?document.getElementById('i6-none').checked:false,t1:getVal('t1'),t2:getVal('t2'),t3:getVal('t3'),t4:getVal('t4'),h1:getVal('h1'),h2:getVal('h2'),h3:getVal('h3'),h4:getVal('h4'),h5:getVal('h5'),h6_revenue:getVal('rev'),score_M:sM,score_I:sI,score_T:sT,score_HAL:sHAL,score_D:sD,score_total:total,d1:getVal('d1'),d2:getVal('d2'),d3:getVal('d3'),d4:getVal('d4'),d5:getVal('d5'),classification:cl,phone:ph,reportType:getVal('rtype'),contactTime:getVal('ctime'),commercialRegister:(document.getElementById('fcr')?document.getElementById('fcr').value.trim():'')};
   showResult(nm,act,total,sM,sI,sT,sHAL,sD,loss);
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)}).then(()=>{/* saved — opaque response with no-cors */}).catch(()=>{/* fail silently */});
 }
